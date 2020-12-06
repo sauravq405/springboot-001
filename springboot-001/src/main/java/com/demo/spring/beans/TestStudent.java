@@ -1,8 +1,15 @@
 package com.demo.spring.beans;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class TestStudent {
 	
-	private int id;
+	@Id
+	@Column(name = "id")
+	private Integer studId;
 	private String name;
 	private double percentage;
 	
@@ -10,19 +17,19 @@ public class TestStudent {
 		super();
 	}
 	
-	public TestStudent(int id, String name, double percentage) {
+	public TestStudent(Integer id, String name, double percentage) {
 		super();
-		this.id = id;
+		this.studId = id;
 		this.name = name;
 		this.percentage = percentage;
 	}
 
-	public int getId() {
-		return id;
+	public Integer getId() {
+		return studId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(Integer id) {
+		this.studId = id;
 	}
 
 	public String getName() {
@@ -43,7 +50,7 @@ public class TestStudent {
 
 	@Override
 	public String toString() {
-		return "TestStudent [id=" + id + ", name=" + name + ", percentage=" + percentage + "]";
+		return "TestStudent [id=" + studId + ", name=" + name + ", percentage=" + percentage + "]";
 	}
 	
 }
