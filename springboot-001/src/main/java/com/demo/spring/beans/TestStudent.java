@@ -1,4 +1,4 @@
-package com.test.spring.beans;
+package com.demo.spring.beans;
 
 public class TestStudent {
 	
